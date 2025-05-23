@@ -16,7 +16,7 @@ public class Main {
 
         // task 3
 
-        for (int i = 0; i < 17; i++){
+        for (int i = 0; i <= 16; i++){
             int number = i % 2;
             if(number == 0){
                 System.out.println(i);
@@ -40,9 +40,8 @@ public class Main {
 
         // task 6
 
-        for(int i = 7; i <= 98; i++){
-            int up = i * 2;
-            if(up % 7 == 0){
+        for(int i = 7; i <= 98; i = i + 7){
+            if(i % 7 == 0){
                 System.out.println(i);
             }
         }
@@ -67,8 +66,7 @@ public class Main {
         int salary = 29000;
         int sumSalary = 0;
         for(int i = 1; i <= 12; i++){
-            sumSalary = sumSalary + ((sumSalary / 100) * 12);
-            sumSalary = sumSalary + salary;
+            sumSalary = (salary + (salary / 100)) * i;
             System.out.println("Месяц " + i + " сумма накоплений равна " + sumSalary + " рублей.");
         }
 
